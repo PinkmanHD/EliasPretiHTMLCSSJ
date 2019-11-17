@@ -1,0 +1,128 @@
+body{
+	margin-left : 20%;
+	margin-right : 20%;
+}
+
+#top #left{
+	text-align: right;
+}
+
+#top{
+	height : 50px;
+	width : 100%;
+	background-color : #3385ff;
+}
+#logo{
+	float : left;
+}
+
+#left{
+	height : 100%;
+	width : 50%;
+	float : right;
+}
+
+#leiste{
+	width : 100%;
+	height : 50px;
+	background-color : #f9e0ff;
+}
+#leiste a {
+	float : left;
+	height : 100%;
+	width : 70px;
+}
+ 
+#leiste > a {
+	display:block;
+	width: 15%;
+	height: 100%;	
+	margin: 0 auto;
+	background-color: pink;
+	float: left;
+	margin-right:4px;
+	color: black;
+	font-weight: bold;
+	text-align:center
+
+}
+
+#bilder{
+	min-height : 200px;
+	height : auto;
+	width : 100%;
+	background-color : #f93728;
+
+}
+
+
+#bilder #bildMedium {
+	float:left;
+	height : 50%;
+	width : 30%;
+	background-color: #e5eb34;
+	margin-left: 3%;
+	margin-top: 3%;
+	
+}
+#grossesBild {
+
+	height:50%;
+	width:100%;	
+}
+
+#bilder #kleineBilder #bk1{
+	float:left;
+	height : 3%;
+	width : 3%;
+	background-color : #f93728;
+}
+
+figcaption {
+    padding-left: 20%;
+}
+
+
+#bilder .kleinebilder {
+	float:left;
+	margin-left : 30px;
+	height : 100px;
+	width : 10%;
+	min-width : 100px;
+	
+}
+
+#endblock{
+	height : 300px;
+	width : 100%;
+}
+
+#endblock #block1{
+	float:left;
+	height : 300px;
+	width : 33.33%;
+}
+#endblock #block1 #bild{
+	float: left;
+	height : 50%;
+	
+}
+
+#endblock #block1 #text{
+	float: left;
+	height : 50%;
+	
+}
+
+#endblock #block2{
+	float: left;
+	height: 100%;
+	width : 33.33%;
+}
+
+#endblock #block3{
+	float: left;
+	height: 100%;
+	width : 33.33%;
+	background-color: red;
+}
