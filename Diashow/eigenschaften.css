@@ -1,0 +1,16 @@
+.button{
+	background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+	width: 200px;
+	height: 40px;
+	margin:auto;
+  display:block;
+}
+
+#diashow{
+	margin:auto;
+  display:block;
+}

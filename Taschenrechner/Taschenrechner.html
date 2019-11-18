@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="eigenschaften.css" rel="stylesheet" type="text/css" />
+	
+</head>
+<body>
+
+
+<div id="div1"></div>
+
+
+<script>
+	var zahl1 = window.prompt("gib eine Zahl ein:");
+	var operator = window.prompt("gib einen Operator ein:");
+	var zahl2 = window.prompt("gib eine weitere Zahl ein:");
+	function myFunctionSet() {
+		if(operator == "+"){
+			var ergeb = Number(zahl1) + Number(zahl2);
+		}
+		else if(operator == "-"){
+			var ergeb = Number(zahl1) - Number(zahl2);
+		}
+		else if(operator == "*"){
+			var ergeb = Number(zahl1) * Number(zahl2);
+		}
+		else if(operator == "/"){
+			var ergeb = Number(zahl1) / Number(zahl2);
+		}
+		document.write(ergeb);
+	}
+	
+</script>
+<div id="zeile1">
+<button onclick="myFunctionSet()" class="button">Berechnen</button>
+
+</body>
+
+
+
+</html>

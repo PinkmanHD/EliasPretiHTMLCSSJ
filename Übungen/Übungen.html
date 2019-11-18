@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="eigenschaften.css" rel="stylesheet" type="text/css" />
+	
+</head>
+<body>
+
+
+<div id="div1"></div>
+
+<input type="radio" name="colors" id="red">Red<br>
+<input type="radio" name="colors" id="green">Green<br>
+<input type="radio" name="colors" id="blue">Blue<br>
+
+<button onclick="myFunctionSet()">Set BG Color</button>
+<button onclick="myFunctionClear()">Clear Color</button>
+
+<button onclick="fensterOeffnen()">Neuen Tab öffnen</button>
+<button onclick="fText()">Fetter Text</button>
+
+<p id="testText">Das ist ein test Text der mit einem Buttondruck Fett wird</p>
+<p id="example">Text</p>
+
+<button onclick="cookiebtn()">SetCookies</button>
+<button onclick="cookiebtn2()">GetCookies</button>
+
+
+<script>
+	
+	var i = window.prompt("Wer sind Sie? Geben Sie ihren Namen ein:");
+	window.alert("Hallo " + i); 
+	document.write("<h1>Übung</h1>");
+	document.write("Hallo " + i );
+	document.write("<br>");
+	var heute = new Date();
+	document.write("Das Aktuelle Datum und Uhrzeit lautet: " + heute);
+	document.write("guten tag");
+	
+	
+	function myFunctionSet() {
+		if(document.getElementById('red').checked) {
+			document.body.style.backgroundColor = "red";
+		}else if(document.getElementById('green').checked) {
+			document.body.style.backgroundColor = "lime";
+		}else if(document.getElementById('blue').checked) {
+			document.body.style.backgroundColor = "blue";
+		}
+	}
+	function myFunctionClear() {
+		document.body.style.backgroundColor = "White";
+	}
+	function fensterOeffnen() { 
+		window.open('');
+	}
+	function fText(){
+		document.getElementById("testText").innerHTML = '<strong>' + document.getElementById("testText").innerHTML +'</strong>'
+	}
+	
+	var userLang = navigator.language || navigator.userLanguage; 
+	alert ("The language is: " + userLang);
+	
+	txt = "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
+	txt+= "<p>Browser Name: " + navigator.appName + "</p>";
+	txt+= "<p>Browser Version: " + navigator.appVersion + "</p>";
+	txt+= "<p>Cookies Enabled: " + navigator.cookieEnabled + "</p>";
+	txt+= "<p>Platform: " + navigator.platform + "</p>";
+	txt+= "<p>User-agent header: " + navigator.userAgent + "</p>";
+
+	
+	document.getElementById("example").innerHTML=txt;
+	
+	function cookiebtn(){
+		var input ="Cookies: "+ prompt("Coocie: ");
+		document.cookie = input;
+	}
+	function cookiebtn2(){
+		alert(document.cookie);
+	}
+
+</script>
+
+
+
+</body>
+
+
+
+</html>

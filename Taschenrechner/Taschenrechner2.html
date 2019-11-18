@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="eigenschaften2.css" rel="stylesheet" type="text/css" />
+	
+</head>
+<body>
+
+<p id="Rechnung">This text is bold</p>
+
+<div id="div1">
+
+<button class="button" onclick="Zahl(1)">1</button> 
+<button class="button" onclick="Zahl(2)">2</button>
+<button class="button" onclick="Zahl(3)">3</button>
+<button class="button" onclick="Re('+')">+</button>
+
+</div>
+<div id="div2">
+
+<button class="button" onclick="Zahl(4)">4</button>
+<button class="button" onclick="Zahl(5)">5</button>
+<button class="button" onclick="Zahl(6)">6</button>
+<button class="button" onclick="Re('-')">-</button>
+
+</div>
+<div id="div3">
+
+<button class="button" onclick="Zahl(7)">7</button>
+<button class="button" onclick="Zahl(8)">8</button>
+<button class="button" onclick="Zahl(9)">9</button>
+<button class="button" onclick="Re('*')">*</button>
+
+</div>
+<div id="div2">
+
+<button class="button" onclick="Zahl(0)">0</button>
+<button class="button" onclick="Re('/')">/</button>
+<button class="buttonenter" onclick="enter()">Enter</button>
+
+</div>
+
+
+<script>
+var geszahl = ""
+var zeichen = 0; //wenn eine operaton geklickt wird wird die var auf 1 gesetzt
+function Zahl(z){
+	
+	geszahl = geszahl + z;
+	document.getElementById("Rechnung").innerHTML = geszahl;
+	/*var content = document.getElementById("Rechnung").innerHTML;
+	content = parseInt(content);
+	content++;
+	document.getElementById("Rechnung").innerHTML = content;
+	*/
+}
+function Re(ze){
+	
+	if(zeichen == 0){
+		zeichen = 1;
+		geszahl = geszahl + ze;
+		document.getElementById("Rechnung").innerHTML = geszahl;
+	}
+	else{
+	}
+}
+
+function enter(){
+	
+	if(geszahl.indexOf('+')>-1){
+		var temp = geszahl.split('+');
+		var ergeb = Number(temp[0]) + Number(temp[1]);
+	}
+	else if(geszahl.indexOf('-')>-1){
+		var temp = geszahl.split('-');
+		var ergeb = Number(temp[0]) - Number(temp[1]);
+	}
+	else if(geszahl.indexOf('*')>-1){
+		var temp = geszahl.split('*');
+		var ergeb = Number(temp[0]) * Number(temp[1]);
+	}
+	else if(geszahl.indexOf('/')>-1){
+		var temp = geszahl.split('/');
+		var ergeb = Number(temp[0]) / Number(temp[1]);
+	}
+document.getElementById("Rechnung").innerHTML = ergeb;
+}
+	
+</script>
+
+
+</body>
+
+
+
+</html>
